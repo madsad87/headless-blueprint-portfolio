@@ -95,6 +95,7 @@ const appConfig = {
     githubUrl: 'https://github.com/wpengine',
     linkedinUrl: 'https://www.linkedin.com/company/wpengine',
   },
+  siteLogoText: 'Madison.dev',
   siteTitle: 'Blueprint Portfolio',
   footerNote: 'Built with WordPress, Cloudflare, and headless architecture.',
 };

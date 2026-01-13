@@ -15,8 +15,48 @@
 }
 
 .logo {
-  width: 200px;
-  height: auto;
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.logoMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 1.2rem;
+  background-color: rgba(120, 84, 58, 0.12);
+  border: 1px solid rgba(120, 84, 58, 0.2);
+  color: var(--color-primary);
+  font-size: 1.6rem;
+}
+
+.logoText {
+  font-size: 1.8rem;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.02em;
+  color: var(--color-black);
+}
+
+.logoDot {
+  color: var(--color-primary);
+}
+
+.srOnly {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 .nav-toggle {
