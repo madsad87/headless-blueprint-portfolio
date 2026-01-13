@@ -6,11 +6,12 @@
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-  background-color: var(--color-primary);
-  padding: 6rem;
-  border: 2rem solid #fff;
-  color: #fff;
-  box-shadow: $box-shadow;
+  background-color: var(--color-surface);
+  padding: 4rem;
+  border-radius: 2.4rem;
+  border: 1px solid var(--color-border);
+  color: var(--color-black);
+  box-shadow: 0 24px 60px rgba(46, 34, 24, 0.08);
 
   @media (min-width: $breakpoint-small) {
     flex-direction: row;
@@ -22,6 +23,7 @@
   width: 100%;
   margin-bottom: 3rem;
   font-size: 1.9rem;
+  color: var(--color-muted);
 
   @media (min-width: $breakpoint-small) {
     width: 60%;
