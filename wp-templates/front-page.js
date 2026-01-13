@@ -75,28 +75,30 @@ export default function Component() {
                   </Button>
                 </div>
               </div>
-              <div className={styles.heroVisual}>
-                <div className={styles.heroCards}>
-                  {appConfig.portfolioStats.map((stat) => (
-                    <div key={stat.label} className={styles.statCard}>
-                      <p className={styles.statLabel}>{stat.label}</p>
-                      <p className={styles.statValue}>{stat.value}</p>
-                      <p className={styles.statNote}>{stat.description}</p>
-                    </div>
-                  ))}
-                </div>
-                <div className={styles.terminalCard}>
-                  <span className={styles.terminalPrompt}>&gt;</span>
-                  <span> initializing_agent…</span>
-                  <span className={styles.terminalAccent}>
-                    &gt; edge_optimization_complete
-                  </span>
-                </div>
-                {heroImage && (
-                  <div className={styles.heroImage}>
-                    <FeaturedImage image={heroImage} priority />
+              <div className={styles.heroVisualPanel}>
+                <div className={styles.heroVisual}>
+                  <div className={styles.heroCards}>
+                    {appConfig.portfolioStats.map((stat) => (
+                      <div key={stat.label} className={styles.statCard}>
+                        <p className={styles.statLabel}>{stat.label}</p>
+                        <p className={styles.statValue}>{stat.value}</p>
+                        <p className={styles.statNote}>{stat.description}</p>
+                      </div>
+                    ))}
                   </div>
-                )}
+                  <div className={styles.terminalCard}>
+                    <span className={styles.terminalPrompt}>&gt;</span>
+                    <span> initializing_agent…</span>
+                    <span className={styles.terminalAccent}>
+                      &gt; edge_optimization_complete
+                    </span>
+                  </div>
+                  {heroImage && (
+                    <div className={styles.heroImage}>
+                      <FeaturedImage image={heroImage} priority />
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
