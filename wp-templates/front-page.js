@@ -38,7 +38,7 @@ export default function Component() {
   const frontPage = data?.frontPage;
   const heroTitle = frontPage?.title ?? appConfig.portfolioHeadline ?? siteTitle;
   const heroDescription =
-    frontPage?.excerpt ?? appConfig.portfolioSubhead ?? siteDescription;
+    frontPage?.content ?? appConfig.portfolioSubhead ?? siteDescription;
   const heroImage = frontPage?.featuredImage?.node;
 
   return (
@@ -213,7 +213,7 @@ Component.query = gql`
     }
     frontPage: pageBy(uri: "/") {
       title
-      excerpt
+      content
       ...FeaturedImageFragment
     }
     generalSettings {
