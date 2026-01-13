@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import classNames from 'classnames/bind';
-import { FaBars, FaSearch } from 'react-icons/fa';
-import Image from 'next/image';
+import { FaBars, FaCode, FaSearch } from 'react-icons/fa';
 import Link from 'next/link';
 
 import { NavigationMenu, SkipNavigationLink } from '../';
+import appConfig from 'app.config';
 
 import styles from './Header.module.scss';
 let cx = classNames.bind(styles);
@@ -16,6 +16,8 @@ let cx = classNames.bind(styles);
  */
 export default function Header({ className, menuItems }) {
   const [isNavShown, setIsNavShown] = useState(false);
+  const logoText = appConfig.siteLogoText ?? appConfig.siteTitle;
+  const [logoBase, logoSuffix] = logoText.split('.', 2);
 
   const headerClasses = cx('header', className);
   const navClasses = cx(
@@ -31,13 +33,16 @@ export default function Header({ className, menuItems }) {
           <div className={cx('logo')}>
             <Link legacyBehavior href="/">
               <a title="Home">
-                <Image
-                  src="/logo.png"
-                  width={400}
-                  height={80}
-                  alt="Blueprint media logo"
-                  layout="responsive"
-                />
+                <span className={cx('logoMark')} aria-hidden="true">
+                  <FaCode />
+                </span>
+                <span className={cx('logoText')}>
+                  {logoBase}
+                  {logoSuffix ? (
+                    <span className={cx('logoDot')}>.{logoSuffix}</span>
+                  ) : null}
+                </span>
+                <span className={cx('srOnly')}>{logoText}</span>
               </a>
             </Link>
           </div>
