@@ -23,6 +23,8 @@ body {
   font-weight: $font-weight-normal;
   letter-spacing: 0.01em;
   line-height: 1.6;
+  background-color: var(--color-background);
+  color: var(--color-black);
 }
 
 img {
