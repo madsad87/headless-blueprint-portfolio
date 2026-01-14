@@ -2,7 +2,6 @@ import { useState } from 'react';
 import classNames from 'classnames/bind';
 import { FaBars, FaCode, FaSearch } from 'react-icons/fa';
 import Link from 'next/link';
-
 import appConfig from 'app.config';
 
 import { NavigationMenu, SkipNavigationLink } from '../';
