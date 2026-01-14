@@ -4,7 +4,6 @@ import { FaBars, FaCode, FaSearch } from 'react-icons/fa';
 import Link from 'next/link';
 
 import appConfig from 'app.config';
-
 import { NavigationMenu, SkipNavigationLink } from '../';
 
 import styles from './Header.module.scss';
